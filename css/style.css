@@ -34,19 +34,10 @@ a:focus nav {
   background-size: cover;
 }
 
-  /* Requirement 5 code here -- Do not remove this comment. */
+  /* Requirement 5 code here -- Do not remove this comment. Maybe this needs to be #about etc */
 .about, .clients, .method, .contact {
   grid-column: 2;
 }
-/* .clients {
-  grid-column: 2;
-}
-.method {
-  grid-column: 2;
-}
-.contact {
-  grid-column: 2;
-} */
 
   /* Requirement 6 code here -- Do not remove this comment. */
 img {
@@ -56,6 +47,7 @@ img {
   /* Requirement 7 code here -- Do not remove this comment. */
 .about-image, .clients-image, .method-image, .contact-image {
   grid-column: 1 / span 3;
+  grid-row: auto;
   max-height: 500px;
 }
 
@@ -106,22 +98,27 @@ img {
   /* Requirement 12 code here -- Do not remove this comment. */
   .container {
     grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: 300px 300px 300px 300px
+    grid-template-rows: 300px 300px 300px 300px;
+
   }
 
 
   /* Requirement 13 code here -- Do not remove this comment. */
   #about, #method, .clients-image, .contact-image {
-    grid-column: 3 / span 5;
+    grid-column: 3 / span 2;
   
   }
 
   /* Requirement 14 code here -- Do not remove this comment. */
   #clients, #contact, .about-image, .method-image {
-    grid-column: 2 / span 4
+    grid-column: 2 / span 2
   }
 
   /* Requirement 15 code here -- Do not remove this comment. */
+
+  .contact-image, .about-image, .clients-image, .method-image {
+    object-fit: contain;
+  }
 }
 
 /** Code for prefers reduced motion **/
