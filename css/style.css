@@ -1,144 +1,151 @@
 
-a.skip{
-  background: white;
-  padding: 6px;
-  -webkit-transition: top 1s ease-out;
-  transition: left 1s ease-out;
-  z-index: 1;
-  /* Requirement 1 code here -- Do not remove this comment. */
-
+body {
+    background-color: #EAE0DA;
+    color: #50577A;
+    font-size: 12pt;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10pt
+}
+h1 {
+    font-size: 30pt;
+    font-weight: bold;
+    color: #0A2647;
 }
 
-
-
-  /* Requirement 2 code here -- Do not remove this comment. */
-a:focus nav {
-  border-top: solid 10px yellow
-  }
-
-  /* Requirement 3 code here -- Do not remove this comment. */
-.container {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  row-gap: 30px;
+h2 {
+    font-size: 20pt;
+    font-weight: bold;
+    color: #144272
+}
+p {
+    margin: 20pt
 }
 
-  /* Requirement 4 code here -- Do not remove this comment. */
-.intro {
-  background-color: #858585;
-  background-image: url("../images/header.jpg");
-  min-height: 400px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+h3 {
+  font-weight: bold;
+  font-size: 14pt;
 }
 
-  /* Requirement 5 code here -- Do not remove this comment. Maybe this needs to be #about etc */
-.about, .clients, .method, .contact {
-  grid-column: 2;
-}
-
-  /* Requirement 6 code here -- Do not remove this comment. */
 img {
-  width: 100%;
+    width: 90%;
+    padding: 20px;
+    margin: 15px 20px 20px 15px;
 }
 
-  /* Requirement 7 code here -- Do not remove this comment. */
-.about-image, .clients-image, .method-image, .contact-image {
-  grid-column: 1 / span 3;
-  grid-row: auto;
-  max-height: 500px;
+
+
+footer {
+    border: #0A2647;
+    border-style: dotted;
+
 }
 
-  /* Requirement 8 code here -- Do not remove this comment. */
-#about, .about-image {
-  grid-row: 1;
-  margin: auto;
-}
-#clients, .clients-image {
-  grid-row: 2;
-  margin: auto;
-}
-#method, .method-image {
-  grid-row: 3;
-  margin: auto;
-}
-#contact, .contact-image {
-  grid-row: 4;
-  margin: auto;
-}
 
-  /* Requirement 9 code here -- Do not remove this comment. */
-.text {
-  align-items: center;
-  max-height: 40vmin;
-  overflow: scroll;
-}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0A2647;
+    font-size: 15pt;
 
-  /*Add the media query here.  Make sure to */
-
-@media screen and (min-width: 800px) {
-  nav{
-    padding-top: 35px;
-    /* Requirement 10 code here -- Do not remove this comment. */
+  }
+  
+ul li {
     display: inline-block;
-
-  }
-  nav li{
-    margin-left: 5%;
-    margin-right:0;
   }
 
-  /* Requirement 11 code here -- Do not remove this comment. */
-  .skip:focus {
-    margin-left: 0px;
-    margin-top: 20px
-  }
-  /* Requirement 12 code here -- Do not remove this comment. */
-  .container {
-    grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: 300px 300px 300px 300px;
-
-  }
-
-
-  /* Requirement 13 code here -- Do not remove this comment. */
-  #about, #method, .clients-image, .contact-image {
-    grid-column: 3 / span 2;
-  
-  }
-
-  /* Requirement 14 code here -- Do not remove this comment. */
-  #clients, #contact, .about-image, .method-image {
-    grid-column: 2 / span 2
-  }
-
-  /* Requirement 15 code here -- Do not remove this comment. */
-
-  .contact-image, .about-image, .clients-image, .method-image {
-    object-fit: contain;
-  }
+.active {
+  background-color: #144272;
+  text-decoration: underline;
 }
 
-/** Code for prefers reduced motion **/
-/* Make no changes below this line.
-   *************************************** 
-   */
-   @media screen and (prefers-reduced-motion: reduce){
-    /*Turn off scroll*/
-    html{
-      scroll-behavior: auto; /* Removes scroll animation */
-    }
+.skip {
+  position: absolute;
+  left: -1000px
+}
+
   
-    /*Turn off transition*/
-    a.skip {
-      -webkit-transition: initial; /* sets to default setting */
-      transition: initial; /* sets to default setting */
-    }
-  
-    /*Turn off parallax*/
-    .intro{
-      background-attachment: initial;
-    }
+li a {
+    display: block;
+    color: #F7F5EB;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #144272;
+    text-decoration: underline;
+  }
+
+/* Literature Page */
+.femlit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  column-gap: 40px;
+  row-gap: 40px;
+  margin: auto;
+
+}
+
+.femlit div {
+  padding: 20px;
+  border: solid #0A2647 5px;
+  background-color: aliceblue;
+}
+
+.lit-image {
+  width: 70%;
+  border-radius: 20pt;
+}
+
+/* History & Politics Page */
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.history img {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  width: 75%;
+}
+
+.history p {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  font-size: 18pt;
+}
+
+/* Dictionary Page */
+
+/* .femdict {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+} */
+
+.femdict dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-flow: row wrap;
+  border: solid #333;
+  border-width: 1px 1px 0 0;
+
+}
+
+.femdict dt {
+  padding: 2px 4px;
+  background: #333;
+  color: #fff;
+}
+
+.femdict dd {
+  margin: 0;
+  padding: 4px;
+  min-height: 3em;
+}
+
