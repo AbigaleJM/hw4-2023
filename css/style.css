@@ -6,6 +6,7 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 1 code here -- Do not remove this comment. */
+  position: absolute;
   margin-left: -400px;
   margin-top: 200px;
 }
@@ -70,7 +71,7 @@ img {
 }
 
   /* Requirement 9 code here -- Do not remove this comment. */
-.text {
+#clients, #method, #contact, #about {
   align-self: auto;
   max-height: 40vmin;
   overflow: scroll;
@@ -90,7 +91,7 @@ img {
   }
 
   /* Requirement 11 code here -- Do not remove this comment. */
-  a.skip {
+  .skip:focus {
     margin-top: 20px;
     margin-left: 0px
   }
