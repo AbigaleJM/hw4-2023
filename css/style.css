@@ -7,8 +7,8 @@ a.skip{
   z-index: 1;
   /* Requirement 1 code here -- Do not remove this comment. */
   position: absolute;
-  margin-left: -400px;
-  margin-top: 200px;
+  left: -400px;
+  top: -200px;
 }
 
   /* Requirement 2 code here -- Do not remove this comment. */
@@ -53,26 +53,26 @@ img {
 
   /* Requirement 8 code here -- Do not remove this comment. */
 #about, .about-image {
-  grid-row: 1;
+  grid-row: 1 / 2;
   margin: auto;
 
 }
 #clients, .clients-image {
-  grid-row: 2;
+  grid-row: 2 / 3;
   margin: auto;
 }
 #method, .method-image {
-  grid-row: 3;
+  grid-row: 3 / 4;
   margin: auto;
 }
 #contact, .contact-image {
-  grid-row: 4;
+  grid-row: 4 / 5;
   margin: auto;
 }
 
   /* Requirement 9 code here -- Do not remove this comment. */
 #clients, #method, #contact, #about {
-  align-self: auto;
+  align-self: center;
   max-height: 40vmin;
   overflow: scroll;
 }
@@ -92,8 +92,8 @@ img {
 
   /* Requirement 11 code here -- Do not remove this comment. */
   .skip:focus {
-    margin-top: 20px;
-    margin-left: 0px
+    top: 20px;
+    left: 0px
   }
   /* Requirement 12 code here -- Do not remove this comment. */
   .container {
